@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energy Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Solar Energy Calculator</h1>
+        <form id="solar-form">
+            <div class="form-group">
+                <label for="solarCapacity">Solar Capacity (in kW):</label>
+                <input type="number" class="form-control" id="solarCapacity" required>
+            </div>
+            <div class="form-group">
+                <label for="noOfDays">Number of Days:</label>
+                <input type="number" class="form-control" id="noOfDays" required>
+            </div>
+            <div class="form-group">
+                <label for="temperatureCoefficient">Temperature Coefficient (in %):</label>
+                <input type="number" step="0.01" class="form-control" id="temperatureCoefficient" required>
+            </div>
+            <div class="form-group">
+                <label for="shadowLossPercentage">Shadow Loss Percentage (in %):</label>
+                <input type="number" step="0.01" class="form-control" id="shadowLossPercentage" required>
+            </div>
+            <div class="form-group">
+                <label for="place">Place:</label>
+                <input type="text" class="form-control" id="place" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time (MM-DD-YYYY):</label>
+                <input type="date" class="form-control" id="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time (MM-DD-YYYY):</label>
+                <input type="date" class="form-control" id="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="noOfYears">Number of Years:</label>
+                <input type="number" class="form-control" id="noOfYears" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Calculate</button>
+        </form>
+        <div id="result" class="mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
